@@ -4,7 +4,7 @@ const input = document.getElementById("msg");
 const chats = document.getElementById("chats");
 
 const nameform = document.getElementById("nameform");
-const name = document.getElementById("name");
+const name = document.getElementById("B2");
 
 let username='';
 nameform.addEventListener('submit', function(event){
@@ -15,7 +15,7 @@ nameform.addEventListener('submit', function(event){
 })
 
 form.addEventListener('submit', function(event){
-  const msg = JSON.stringify({msg: input.value, name: username})
+  const msg = JSON.stringify({msg: input.value, B2: username})
   socketio.emit('message', msg);
   input.value='';
   event.preventDefault();
@@ -25,7 +25,7 @@ socketio.on('message',function(msg){
 
   const dt = document.createElement("dt");
   const dd = document.createElement("dd");
-  dt.append(obj.name);
+  dt.append(obj.B2);
   chats.append(dt);
   dd.append(obj.msg);
   chats.append(dd);

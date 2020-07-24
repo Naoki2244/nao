@@ -8,13 +8,21 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>チャット</h1>
+  
+  <button id="B1">
+    <div class="left"></div>
+    チャット
+    <div class="right"></div>
+  </button>
+  
     <dl id="chats"></dl>
     <form id="nameform">
-      <input id="name" autocomplete="off" placeholder="表示名" /><button>参加</button>
+      <input id="B2" autocomplete="off" placeholder="表示名" />
+      <button id="B3">参加</button>
+      
     </form>
     <form id="form">
-      <input id="msg" autocomplete="off" /><button>送信</button>
+      <input id="msg" autocomplete="off" /><button id="B4">送信</button>
     </form>
     <script src="main.js"></script>
 </body>
